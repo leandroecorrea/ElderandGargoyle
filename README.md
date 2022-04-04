@@ -12,4 +12,5 @@ Simple boss AI built using the animator and state machines. The AI has two main 
 ![Claw](https://media.githubusercontent.com/media/leandroecorrea/ElderandGargoyle/master/Claw.gif)
 ###### Horizontal fireball
 ![HorizontalFireball](https://media.githubusercontent.com/media/leandroecorrea/ElderandGargoyle/master/Horizontal_Fireball.gif)
+<br />
 All assets provided by Elderand.
