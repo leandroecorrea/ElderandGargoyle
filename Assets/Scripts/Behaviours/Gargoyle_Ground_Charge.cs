@@ -15,6 +15,7 @@ public class Gargoyle_Ground_Charge : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        _remainingChargeTime = chargeTime;
         animator.SetFloat("Charge_Time", chargeTime);
     }
 }

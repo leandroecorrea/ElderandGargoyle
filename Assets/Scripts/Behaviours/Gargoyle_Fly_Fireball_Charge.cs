@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gargoyle_Fireball_Charge : StateMachineBehaviour
+public class Gargoyle_Fly_Fireball_Charge : StateMachineBehaviour
 {
     private Rigidbody2D _rb;
     private float _rotationSpeed = 75;

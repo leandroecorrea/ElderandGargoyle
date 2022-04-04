@@ -38,7 +38,7 @@ public class Gargoyle : MonoBehaviour
         _shouldFlip = false;
         // TODO: this boolean is just for the rotation in the fireball, replace it with comprobation on the transform
         HasRotated = !HasRotated;
-        yield return new WaitForSeconds(0.2f);        
+        yield return new WaitForSeconds(0.5f);        
         rb.transform.Rotate(0, 180, 0);
     }
 
@@ -73,8 +73,7 @@ public class Gargoyle : MonoBehaviour
 
     private void SetFlyingRandomChoice()
     {
-        //int randomNumber = UnityEngine.Random.Range(0, 100);
-        int randomNumber = 50;
+        int randomNumber = UnityEngine.Random.Range(0, 100);        
         animator.SetInteger("Fly_Random_Choice", randomNumber);
     }
 

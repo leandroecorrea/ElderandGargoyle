@@ -22,7 +22,8 @@ public class Gargoyle_Grounded_Behaviour : StateMachineBehaviour
         {
             return;
         }
-        SetGroundedRandomChoice(animator);
+        //SetGroundedRandomChoice(animator);
+        animator.SetTrigger("Claw");
     }
 
     private void SetGroundedRandomChoice(Animator animator)
@@ -45,6 +46,7 @@ public class Gargoyle_Grounded_Behaviour : StateMachineBehaviour
                 int randomChoice = UnityEngine.Random.Range(0, 100);
                 if(randomChoice < 80)
                 {
+                   
                     animator.SetTrigger("Throw_Fireball");
                     animator.SetInteger("Previous_Choice", (int)BehaviourChoices.Gargoyle_Throw_Fireball);
                 }
@@ -56,6 +58,7 @@ public class Gargoyle_Grounded_Behaviour : StateMachineBehaviour
 
     private bool RepeatedChoice(Animator animator)
     {
+        // Need a refactor
         int previousChoice = animator.GetInteger("Previous_Choice");
         if (previousChoice == (int)BehaviourChoices.Leap_Off)
         {

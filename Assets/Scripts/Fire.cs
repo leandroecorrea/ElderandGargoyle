@@ -20,10 +20,16 @@ public class Fire : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (NotFriendlyTrigger(other.gameObject.name))
-        {
+        {            
+            Debug.Log(other.gameObject.transform.position + " : " + rb.position);
             Destroy(gameObject);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
     private static bool NotFriendlyTrigger(string triggerName)
     {
         return triggerName != "Gargoyle" && triggerName != "AttackBox" && triggerName != "LandingArea";
